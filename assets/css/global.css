@@ -252,6 +252,7 @@ textarea.form-control {
 :root {
   --var-menu-height:70px;
   --var-site-primary-color:#ff6c00;
+  --site-color-primary-hover:#df5c00;
 }
 
 html, body {
@@ -278,10 +279,9 @@ html, body {
 }
 @media (min-width: 768px) {
   .section-hero-cover {
-    min-height: auto;
+    min-height: 100dvh;
     background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
     background-position: top var(--var-menu-height) center;
-    border-radius: 0;
   }
 }
 .section-hero-cover.hero-woman {
@@ -290,9 +290,9 @@ html, body {
 }
 @media (min-width: 768px) {
   .section-hero-cover.hero-woman {
+    min-height: 100dvh;
     background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman.png);
     background-position: bottom right;
-    border-radius: 0;
   }
 }
 .section-hero-cover .wrap-content {
@@ -336,6 +336,12 @@ html, body {
 }
 .section-hero-cover .wrap-content button.btn-cs {
   width: 100%;
+  background: var(--var-site-primary-color);
+  color: #fff;
+}
+.section-hero-cover .wrap-content button.btn-cs:hover {
+  background: var(--site-color-primary-hover);
+  border-color: var(--site-color-primary-hover);
 }
 @media (min-width: 768px) {
   .section-hero-cover .wrap-content h1 {

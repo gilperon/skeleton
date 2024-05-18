@@ -3,7 +3,7 @@
 @import "_variables";
 
 // Import Bootstrap
-@import "../../vendor/bootstrap-5.3.3/scss/bootstrap";
+// @import "../../vendor/bootstrap-5.3.3/scss/bootstrap";
 
 // Import Custom Settings after importing Bootstrap to override default  
 @import "_custom";
@@ -38,22 +38,26 @@ html,body{
    
     background-image: linear-gradient(to bottom,#080808 20%,rgba(60,60,60,.35) 40%,rgba(0,0,0,.01) 80%,#000), url(../img/hero-cover-mobile-min.png);
     background-size: cover;
-    background-position: bottom center;
+    background-position: bottom -50px center;
     background-repeat: no-repeat;
-    min-height: 900px;
+    min-height: 750px;
     height:100dvh;
     padding-top:var(--var-menu-height);
+    border-radius:0 0 40px 40px;
     @media (min-width: 768px) {
         min-height: auto;
         background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
         background-position: top var(--var-menu-height) center;
+        border-radius:0;
     }
 
     &.hero-woman{
+        min-height: 750px;
         background-image: linear-gradient(to bottom,#080808 20%,rgba(60,60,60,.35) 40%,rgba(0,0,0,.01) 80%,#000), url(../img/hero-cover-woman-mobile-min.png);
         @media (min-width: 768px) {
             background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman.png);
             background-position: bottom right;
+            border-radius:0;
         }
     }
 

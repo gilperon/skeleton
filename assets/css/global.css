@@ -12097,6 +12097,7 @@ textarea.form-control {
 
 :root {
   --var-menu-height:70px;
+  --var-site-primary-color:#ff6c00;
 }
 
 html, body {
@@ -12120,8 +12121,25 @@ html, body {
   height: 100dvh;
   padding-top: var(--var-menu-height);
 }
+@media (min-width: 768px) {
+  .section-hero-cover {
+    min-height: auto;
+    background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
+    background-position: top var(--var-menu-height) center;
+  }
+}
+.section-hero-cover.hero-woman {
+  background-image: linear-gradient(to bottom, #080808 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman-mobile-min.png);
+}
+@media (min-width: 768px) {
+  .section-hero-cover.hero-woman {
+    background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman.png);
+    background-position: bottom right;
+  }
+}
 .section-hero-cover .wrap-content {
-  max-width: 450px;
+  max-width: 400px;
+  width: 100%;
 }
 .section-hero-cover .wrap-content h1, .section-hero-cover .wrap-content .h1 {
   font-family: "Poppins";
@@ -12130,7 +12148,7 @@ html, body {
   color: #fff;
 }
 .section-hero-cover .wrap-content h1 span, .section-hero-cover .wrap-content .h1 span {
-  color: #ff6c00;
+  color: var(--var-site-primary-color);
 }
 .section-hero-cover .wrap-content h1 .counter_discount, .section-hero-cover .wrap-content .h1 .counter_discount {
   min-width: 60px;
@@ -12139,30 +12157,39 @@ html, body {
   zoom: 0.55;
   margin-left: -30px;
 }
-.section-hero-cover .wrap-content .form-control, .section-hero-cover .wrap-content .form-select {
+.section-hero-cover .wrap-content .text-cs {
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 15px;
+  max-width: 390px;
+  color: #fff;
+}
+.section-hero-cover .wrap-content input.form-control {
   font: 14px/30px "Inter";
   border-radius: 6px;
   padding: 0.4rem 1.2rem 0.375rem;
   background: #494949;
   color: #000;
+  width: 100%;
   border: 0;
 }
-.section-hero-cover .wrap-content .form-control::placeholder, .section-hero-cover .wrap-content .form-select::placeholder {
+.section-hero-cover .wrap-content input.form-control::placeholder {
   color: #999;
 }
+.section-hero-cover .wrap-content button.btn-cs {
+  width: 100%;
+}
 @media (min-width: 768px) {
-  .section-hero-cover {
-    min-height: auto;
-    background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
-    background-position: top var(--var-menu-height) center;
-  }
-  .section-hero-cover .wrap-content {
-    max-width: 100%;
-  }
   .section-hero-cover .wrap-content h1, .section-hero-cover .wrap-content .h1 {
     font-size: 2.6rem;
   }
   .section-hero-cover .wrap-content h1 .counter_symbol, .section-hero-cover .wrap-content .h1 .counter_symbol {
     margin-left: -20px;
+  }
+  .section-hero-cover .wrap-content .text-cs {
+    font-size: 17px;
+  }
+  .section-hero-cover .wrap-content input.form-control, .section-hero-cover .wrap-content button.btn-cs {
+    min-width: 85%;
   }
 }

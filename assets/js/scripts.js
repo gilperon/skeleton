@@ -1,4 +1,21 @@
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    function toggleMainClass() {
+        const mainElement = document.querySelector('.section-hero-cover');
+        if (mainElement) {
+            if (Math.random() < 0.75) {
+                mainElement.classList.add('hero-woman');
+            } 
+        }
+    }
+    toggleMainClass();
+});
+
+
+
+
+
 let valueDisplays = document.querySelectorAll(".counter_discount");
 
 let interval = 2500; // Increased interval for slower transition

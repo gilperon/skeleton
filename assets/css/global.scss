@@ -19,6 +19,7 @@
 
 :root{
     --var-menu-height:70px;
+    --var-site-primary-color:#ff6c00;
 }
 
 html,body{
@@ -42,16 +43,30 @@ html,body{
     min-height: 900px;
     height:100dvh;
     padding-top:var(--var-menu-height);
+    @media (min-width: 768px) {
+        min-height: auto;
+        background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
+        background-position: top var(--var-menu-height) center;
+    }
+
+    &.hero-woman{
+        background-image: linear-gradient(to bottom,#080808 20%,rgba(60,60,60,.35) 40%,rgba(0,0,0,.01) 80%,#000), url(../img/hero-cover-woman-mobile-min.png);
+        @media (min-width: 768px) {
+            background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman.png);
+            background-position: bottom right;
+        }
+    }
 
     .wrap-content{
-        max-width: 450px;
+        max-width: 400px;
+        width:100%;
         h1{
             font-family: 'Poppins';
             font-weight: 600;
             font-size: calc(1.375rem + 3.5vw);
             color:#fff;
             span{
-                color:#ff6c00;
+                color:var(--var-site-primary-color);
             }
             .counter_discount{
                 min-width: 60px;
@@ -61,31 +76,44 @@ html,body{
                 margin-left:-30px;
             }
         }
-        .form-control,.form-select{
+        .text-cs{
+            font-weight: 400;
+            font-family: 'Montserrat';
+            font-size: 15px;
+            max-width: 390px;
+            color:#fff;
+        }
+        input.form-control{
             font:14px / 30px 'Inter';
             border-radius:6px;
             padding:.4rem 1.2rem .375rem;
             background:#494949;
             color: #000; 
+            width:100%;
             border:0;
             &::placeholder { 
                 color: #999; 
             }
         }
+        button.btn-cs{
+            width: 100%;
+        }
     }
 
     @media (min-width: 768px) {
-        min-height: auto;
-        background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);
-        background-position: top var(--var-menu-height) center;
 
         .wrap-content{
-            max-width: 100%;
             h1{
                 font-size: 2.6rem;
                 .counter_symbol{
                     margin-left:-20px;
                 }
+            }
+            .text-cs{
+                font-size: 17px;
+            }
+            input.form-control, button.btn-cs{
+                min-width: 85%;
             }
         }
     }

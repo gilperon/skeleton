@@ -12112,9 +12112,11 @@ html, body {
   position: absolute;
   inset: 0;
   height: var(--var-menu-height);
+  z-index: 1;
 }
 
 .section-hero-cover {
+  position: relative;
   background-image: linear-gradient(to bottom, #080808 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-mobile-min.png);
   background-size: cover;
   background-position: bottom -50px center;
@@ -12216,4 +12218,28 @@ html, body {
   margin-right: 6px;
   margin-left: -15px;
   vertical-align: -2px;
+}
+.section-hero-cover ._shades {
+  position: absolute;
+  top: 10vw;
+  left: 0;
+  z-index: 1;
+  display: flex;
+}
+.section-hero-cover ._shades ._transparent {
+  width: 300px;
+  height: 70px;
+  margin-left: -170px;
+  border: 1px solid #fff;
+  transform: scaleX(-1) skew(1deg, 10deg);
+  opacity: 0.2;
+}
+.section-hero-cover ._shades ._filled {
+  width: 200px;
+  height: 70px;
+  margin-left: -170px;
+  background-color: #ea430e;
+  background-image: linear-gradient(90deg, #ea430e 0%, #f16e44 100%);
+  transform: scaleX(-1) skew(1deg, 10deg);
+  opacity: 0.15;
 }

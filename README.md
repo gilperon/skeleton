@@ -2,6 +2,8 @@
 
 GITHUB
 
+------
+
 Cria a pasta pro seu projeto, por exemplo: /site
 
 Abre o terminal e inicia um git:

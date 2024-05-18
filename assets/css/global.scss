@@ -3,11 +3,12 @@
 @import "_variables";
 
 // Import Bootstrap
-// @import "../../vendor/bootstrap-5.3.3/scss/bootstrap";
+@import "../../vendor/bootstrap-5.3.3/scss/bootstrap";
 
 // Import Custom Settings after importing Bootstrap to override default  
 @import "_custom";
 @import "_footer";
+
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');

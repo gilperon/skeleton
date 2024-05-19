@@ -1,243 +1,98 @@
 
-
-$black: #000000;
-$white: #ffffff;
-$font-primary: 'Nunito Sans',Arial, sans-serif;
-$primary: #f7b633;
-
-@mixin border-radius($x) {
-border-radius:$x;
+footer{
+    padding: 2.2em 0 2em;
+    @media (max-width: 768px) {
+	padding: 2.2em 0 2em;
+    }
 }
 
-.footer-04{
-    font-family: "Nunito", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-    font-weight: normal;
-	padding: 4.1em 0;
-	> div{
-		padding-left:1.8rem;
-		padding-right:1.8rem;
-		&:last-child{
-			padding:40px 1rem 42px !important;
-		}
-	}
-	@media (min-width: 992px) {
-		padding: 6.5em 0;
-		> div{
-			padding-left:calc(var(--bs-gutter-x) * .5);
-			padding-right:calc(var(--bs-gutter-x) * .5);
-		}
-	}
-}
+$primary:#fff;
+$white: #fff;
+
+.footer-cs{
+
+    position: relative;
+    background-color:#161616;
+
+    .logo-footer{
+        height: 60px;
+        @media (max-width: 768px) {
+            height: 50px;
+        }
+    }
+
+    .container{
+        position: relative;
+        z-index:1;
+    }
+
+    &::before{
+        content: "";
+        position:absolute;
+        z-index:0;
+        top:0;
+        left:0;
+        background-color:#161616;
+        width: 100%;
+        height:100%;
+        background: url(../images/bg-footer-mob.png) no-repeat top center;
+        background-size: cover;
+        border-radius:40px 40px 0 0;
+        @media (min-width: 768px) {
+            background: url(../images/bg-footer.png) no-repeat bottom center;
+            background-size: cover;
+        }
+    }
+
+    
+
+    font-family: 'Inter', Arial, sans-serif;
 
 
-//COVER BG
-.img,
-.blog-img,
-.user-img{
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.ftco-footer-social {
-	li {
-		list-style: none;
-		margin: 0 10px 0 0;
-		display: inline-block;
-		a {
-			height: 40px;
-			width: 40px;
-			display: block;
-			background: rgba($black, .05);
-			border-radius: 50%;
-			position: relative;
-			span {
-				position: absolute;
-				font-size: 20px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			&:hover {
-				color: $white;
-			}
-		}
-	}
-}
+    svg{zoom:.8;}
 
 
-//FORM CONTROL
-.form-control {
-	height: 52px;
-	background: $white;
-	color: $black;
-	font-size: 18px;
-	border-radius: 0px;
-	box-shadow: none;
-	border: 1px solid rgba(0,0,0,.1);
-	&:focus, &:active {
-		outline: none !important;
-		box-shadow: none;
-	}
-}
-textarea.form-control {
-	height: inherit!important;
-}
-
-.tagcloud {
-	a {
-		text-transform: uppercase;
-		display: inline-block;
-		padding: 4px 10px;
-		margin-bottom: 7px;
-		margin-right: 4px;
-		border-radius: 4px;
-		font-size :11px;
-		&:hover {
-			border: 1px solid #000;
-		}
-	}
-}
-
-.ftco-section{
-	padding: 12em 0;
-	h2{
-		margin-bottom: 0;
-	}
-}
-
-
-
-//FOOTER 04
-.footer-04{
-	background: #272727;
-	padding-bottom: 0;
-	.border-top{
-		border-color: darken(#272727,5%) !important;
-		background: darken(#272727,5%);
-	}
 	.footer-heading{
-		font-size: 13px;
-		color: $white;
-		margin-bottom: 30px;
-		text-transform: uppercase;
-		font-weight: 600;
-		letter-spacing: 1px;
+        font-weight: 500;
+		font-size: 16px;
+		color: rgba(255,255,255,.9);
+		margin-bottom: 20px;
 		.logo{
-			letter-spacing: none;
-			font-size: 13px;
-			color: $white;
+			color: #ffffff;
 			text-transform: uppercase;
 		}
 	}
-	p{
-		color: rgba(255,255,255,.3);
-	}
 	a{
 		color: $primary;
+        font-size:14px;
 	}
-	.ftco-footer-social{
-		li{
-			a{
-				color: $white;
-				&:hover{
-					background:#111;
-				}
-			}
-		}
+	p{
+		color: $primary;
+        font-size:14px;
 	}
-	.tagcloud{
-		a{
-			border: 1px solid rgba(255,255,255,.1);
-			color: $white;
-			&:hover{
-				background:#111;
-			}
-		}
+	.copyright{
+		color: $primary;
+		font-size: 11px;
 	}
-
 	.list-unstyled{
 		li{
 			a{
-				color: rgba(255,255,255,.7);
+				color: $primary;
+				&:hover{
+					color: $white;
+				}
 			}
 		}
 		a{
-			color: rgba(255,255,255,.7);
-		}
-	}
-	.ftco-footer-social{
-		li{
-			a{
-				border-radius: 4px;
-				border: 1px solid rgba(255,255,255,.1);
-			}
-		}
-	}
-	.subscribe-form{
-		.form-group {
-			position: relative;
-			margin-bottom: 0;
-			@include border-radius(0);
-			input {
-				background: rgba(255,255,255,.05) !important;
-				border: none !important;
-				outline : none !important;
-				color: rgba(255,255,255,.3) !important;
-				font-size: 16px;
-				padding:.375rem 1rem;
-				@include border-radius(0);
-				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				  color: rgba(255,255,255,.3) !important;
-				}
-				&::-moz-placeholder { /* Firefox 19+ */
-				  color: rgba(255,255,255,.3) !important;
-				}
-				&:-ms-input-placeholder { /* IE 10+ */
-				  color: rgba(255,255,255,.3) !important;
-				}
-				&:-moz-placeholder { /* Firefox 18- */
-				  color: rgba(255,255,255,.3) !important;
-				}
-				&:focus{
-					outline: none !important;
-					box-shadow: none;
-				}
-			}
-			.submit{
-				color: $white !important;
-				display: block;
-				width: 52px;
-				height: 52px;
-				font-size: 16px;
-				background: $primary !important;
-				border: none;
-				@include border-radius(0);
-				&:hover, &:focus{
-					text-decoration: none !important;
-					outline: none !important;
-				}
-			}
-		}
-	}
-	.copyright{
-		color:rgba(255,255,255,.25);
-		a{
-			color: rgba(255,255,255,.5);
-		}
-	}
-}
-
-
-.ftco-footer-social{
-	li{
-		a{
-			color: $white;
+			color: $primary;
 			&:hover{
-				background:#111;
+				color: $white;
 			}
 		}
 	}
+
+
+
 }
+
+

@@ -15,6 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 
 :root{
@@ -25,8 +26,16 @@
 
 html,body{
     overflow-x: hidden;
-    background-color:#f9f9f9;
 }
+
+.fc-gradient{
+    color: transparent;
+    background:#ff6c00;
+     background: linear-gradient(90deg, #ff6c00  0%, #ffba00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 
 
 .section-navigation{
@@ -65,7 +74,7 @@ html,body{
     }
 
     .wrap-content{
-        max-width: 400px;
+        max-width: 370px;
         width:100%;
         h1{
             font-family: 'Poppins';
@@ -91,7 +100,7 @@ html,body{
             color:#fff;
         }
         input.form-control{
-            font:14px / 30px 'Inter';
+            font:16px / 30px 'Inter';
             border-radius:6px;
             padding:.4rem 1.2rem .375rem;
             background:#494949;
@@ -100,6 +109,7 @@ html,body{
             border:0;
             &::placeholder { 
                 color: #999; 
+                font-size:15px;
             }
         }
         button.btn-cs{
@@ -172,4 +182,213 @@ html,body{
         }
     }
     
+}
+
+
+
+
+.section-vantagens{
+
+    position:relative;
+    background:#F5F6FA;
+
+    --var-main-font-regular: Poppins;
+
+    .display-cs {
+        line-height: 0.92;
+        font-family: var(--var-main-font-regular);
+        color:#000;
+        margin-bottom:2rem;
+        letter-spacing: -1px;;
+    }
+
+    .btn-cs {
+        border-radius: 5px;
+        padding: 0.8rem 1.2rem;
+        font-size: 16px;
+        width: fit-content;
+        background: #000;
+        margin-top:-20px;
+        &:hover {
+            opacity:.75;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .display-cs {
+            font-size:40px;
+        } 
+        .btn-cs {
+            padding: 0.6rem 1.15rem 0.7rem;
+            font-size: 14px;
+            margin-top: -5px;
+            width: 100%;
+        }
+    }
+
+    .push-notification{
+        position:absolute;top: 70px;right: 0;z-index:1;border-radius:5px;
+        img{zoom:.65}
+        @media (max-width: 768px) {
+            position:absolute;top: -5px;left: -10px;z-index:1;border-radius:5px;
+            img{zoom:.62}
+        }
+    }
+
+    .img-revert{
+        margin-top:-20px;
+        transform: scale(-1, 1); max-width: 450px; object-fit: contain; display: flex; align-self: start; 
+        @media (max-width: 768px) {
+            margin-top:-20px;
+            transform: none; 
+            max-width: 100%;
+        }
+    }
+
+    /* Grid For desktop */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width:100%;
+    }
+    .grid-item {
+        padding: 40px;
+        background:#fff;
+        zoom:.8;
+    }
+
+    /* Grid For Mobile */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            max-width: 100%;
+            margin:0 auto;
+        }
+        .grid-item {
+            padding: 20px 25px 30px;
+        }
+    }
+
+    .box-number{
+        display:flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        > div{
+            &:first-child{
+                font-family: var(--var-main-font-light);
+                color:#C12746;
+            }
+            &:nth-child(2){
+                font-size:16px;
+                font-family: "Inter", Arial, sans-serif;
+                color:#000;
+                font-weight: 700;
+            }
+            &:nth-child(3){
+                font-size:16px;
+                font-family: "Inter", Arial, sans-serif;
+                color:#000;
+            }
+            &:last-child{
+                margin-top: 20px;
+                width: 70px;
+                height: 3px;
+                background: #ddd;
+                border-radius: 5px;
+                display: block;
+            }
+        }
+
+        //Mobile
+        @media (max-width: 768px) {
+
+            > div{
+                &:first-child{
+                    font-family: var(--var-main-font-light);
+                    color:#C12746;
+                }
+                &:nth-child(2){
+                    font-size:16px;
+                    font-family: "Inter", Arial, sans-serif;
+                    color:#000;
+                    font-weight: 700;
+                }
+                &:nth-child(3){
+                    font-size:16px;
+                    font-family: "Inter", Arial, sans-serif;
+                    color:#000;
+                }
+                &:last-child(3){
+                    margin-top: 15px;
+                    width: 50px;
+                    height: 2px;
+                    background: #C12746;
+                    border-radius: 5px;
+                    display: block;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+.section-cover-orange{
+    
+    position:relative;
+    //background:url('https://assets-global.website-files.com/6143565787b5546c16508505/6144dca1557cc5cbaaeef191_bg-1-cta-construction-x-template.svg') no-repeat left bottom #ff6c00;
+    //background-size:600px;
+    
+    background-image: linear-gradient(to bottom, rgb(130 48 0 / 50%) 0%, rgb(180 68 3 / 90%) 100%), url(https://www.ewally.com.br/wp-content/uploads/2023/06/use-cases-fintech.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: bottom center;
+    background-color:#ff6c00;
+
+    .display-cs {
+        line-height: 1.2;
+        font-family: var(--var-main-font-light);
+        font-weight: 300;
+        color:#fff;
+        margin-bottom:2.2rem;
+        max-width: 600px;
+        font-size:2.6rem;
+        //Mobile
+        @media (max-width: 768px) {
+            font-size:30px;
+            font-family: var(--var-main-font-light);
+            margin-bottom:2.2rem;
+        }
+            span{
+                font-family: var(--var-main-font-bold);
+                font-weight: 700;
+            }
+    }
+
+    .btn-cs {
+        border-radius: 5px;
+        padding: 0.8rem 2.2rem 0.9rem;
+        font-size: 16px;
+        width: fit-content;
+        margin: 0 auto;
+        background: rgba(0,0,0,.35);
+        border:0;
+        &:hover {
+            background: rgba(0,0,0,.95);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .btn-cs {
+            padding: 0.6rem 1.5rem 0.7rem;
+            font-size: 14px;
+            margin-top: -5px;
+        }
+    }
+
 }

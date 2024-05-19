@@ -378,6 +378,7 @@ html,body{
         margin: 0 auto;
         background: rgba(0,0,0,.35);
         border:0;
+        white-space:nowrap;
         &:hover {
             background: rgba(0,0,0,.95);
         }

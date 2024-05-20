@@ -220,7 +220,7 @@ $menu-size-height:70px;
     * OffCanvas BootStrap Override Styles
     *
     */
-        .offcanvas.offcanvas-end {width: 270px;}
+        .offcanvas.offcanvas-end {width: 250px;}
         .offcanvas-header {height:$menu-size-height;min-height:$menu-size-height;}
         .offcanvas-body {padding: 1rem 0.5rem; }
         .btn-close {
@@ -249,6 +249,19 @@ $menu-size-height:70px;
             }
         }
 
+        .icon-search{
+            display:inline-block;
+            width: 16px; 
+            height: 16px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66691 12.7002C5.48165 12.7002 4.32294 12.3491 3.33698 11.6913C2.35102 11.0335 1.58197 10.0983 1.12688 9.00393C0.671795 7.90951 0.551046 6.70482 0.779869 5.54185C1.00869 4.37889 1.57684 3.30975 2.41262 2.46932C3.2484 1.62889 4.31438 1.05484 5.47607 0.819582C6.63775 0.58432 7.84308 0.698383 8.94 1.1474C10.0369 1.59642 10.9763 2.36027 11.6396 3.34257C12.3028 4.32487 12.6603 5.48161 12.6669 6.66685C12.6713 7.45758 12.5194 8.24138 12.2198 8.97319C11.9202 9.70499 11.479 10.3704 10.9214 10.9311C10.3638 11.4917 9.70086 11.9367 8.97073 12.2403C8.24059 12.5439 7.45766 12.7002 6.66691 12.7002ZM6.66691 1.6402C5.66974 1.6336 4.69307 1.92334 3.86082 2.47268C3.02858 3.02201 2.37826 3.80618 1.99237 4.72569C1.60649 5.6452 1.50243 6.65861 1.6934 7.63735C1.88437 8.61609 2.36177 9.51605 3.06501 10.223C3.76826 10.93 4.66568 11.4122 5.64339 11.6084C6.6211 11.8046 7.63505 11.7059 8.5566 11.3249C9.47815 10.9439 10.2658 10.2978 10.8195 9.46849C11.3733 8.63918 11.6682 7.66405 11.6669 6.66685C11.6687 5.33777 11.1433 4.06224 10.206 3.11994C9.26871 2.17764 7.99599 1.64549 6.66691 1.6402V1.6402Z" fill="%23ffffff"/><path d="M14.7857 15.2857C14.6531 15.2855 14.526 15.2328 14.4323 15.139L10.2123 10.919C10.124 10.8242 10.0759 10.6988 10.0782 10.5693C10.0805 10.4398 10.133 10.3162 10.2246 10.2246C10.3162 10.133 10.4398 10.0805 10.5693 10.0782C10.6988 10.0759 10.8242 10.124 10.919 10.2123L15.139 14.4323C15.2326 14.5261 15.2852 14.6532 15.2852 14.7857C15.2852 14.9182 15.2326 15.0452 15.139 15.139C15.0438 15.2304 14.9177 15.2828 14.7857 15.2857V15.2857Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right:5px;
+            margin-left:0;
+            vertical-align: -2px;
+        }
+
 
 
     /*
@@ -258,14 +271,12 @@ $menu-size-height:70px;
     */
         .logo {width: 95px;height: 29px;}
         .div-cta {
-            background: #f5f7f9;
-            border-top: 1px solid #e9eaec;
-            border-bottom: 1px solid #e9eaec;
+            background: var(--var-site-primary-color);
             padding: 0.6rem;
         }
         .btn-cta {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             min-height:40px;
             padding: 8px 20px 9px 8px;
@@ -273,21 +284,113 @@ $menu-size-height:70px;
             width: 95%;
             max-width: 236px;
             text-align: center;
-            font: 500 14px/18px 'MontSerrat',Arial,sans-serif;
+            font: 400 15px/18px var(--var-ff-bootstrap);
             color: #fff !important;
             text-decoration: none;
-            border-radius: 30px;
-            box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
-            background: #ef5929;
+            border-radius: 4px;
+            //box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
+            background: var(--var-site-primary-color);
             white-space: nowrap;
             &:hover {
-                background: #1a1a1a;
+                text-decoration: underline;
             }
             .arrow {
                 font-size: 26px;
             }
-            .space {
-                margin-right: 32px;
-            }
         }
 }
+
+
+/*
+*
+* OffCanvas Menu Navigation
+*
+*/
+#mobile-navigation {
+
+
+    /*
+    *
+    * OffCanvas Menu Links
+    *
+    */
+
+        > a {
+            font:500 15px/22px Inter;
+            color: #1f1845;
+            padding: 12px 15px;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            border-radius: 10px;
+            margin-bottom: 2px;
+            &:hover {
+                //background: #f5f6fa;
+                text-decoration: underline;
+            }
+            >i {
+                font-size: 15px;
+                margin-right: 6px;
+            }
+            >span {
+                font-size: 17px;
+                float: right;
+            }
+        }
+        >a.active {
+            background: #f5f6fa;
+        }
+        hr.divider {
+            border-color: #e9eaec;
+            opacity: 1;
+        }
+
+        .arrow-nav {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin-top:4px;
+            vertical-align: middle;
+            content: "";
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14" fill="none"><path d="M22.0964 2.26436L12.0118 12.5109L1.74743 2.24659" stroke="%231f1845" stroke-width="2.62869" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border:0;
+            opacity:.4;
+        }
+
+
+        /*
+        *
+        * Menu Mobile OffCanvas DropDown Links
+        *
+        */
+            ul {
+                
+                li {
+                    padding-left: 18px;
+                    position: relative;
+                    
+                        background:#f9f9f9;
+                        border-left:2px solid #ef5929;
+                    a {
+                        display: block;
+                        font:500 15px/22px Inter;
+                        color: #1f1845;
+                        padding: 12px 6px 12px;
+                        margin-bottom:4px;
+                            color: #000;
+                        &:hover {
+                            color: #ef5929;
+                        }
+                    }
+
+
+                }
+            }
+
+}
+

@@ -350,6 +350,27 @@ html,body{
 
 .section-cover-prioridade{
 
+    .wrap-content{
+        .fs-custom{
+            line-height: 1.1;
+            @media (max-width: 768px) {
+                font-size:calc(1.375rem + 1.85vw);
+            }
+        }
+    }
+
+    .wrap-image{
+        max-width: 580px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            margin-top:-12px;
+            margin-bottom:15px;
+        }
+    }
+
     .btn-cs {
         padding: 0.8rem 1.5rem 0.9rem;
         font-size: 16px;
@@ -365,7 +386,7 @@ html,body{
             color:#fff;
         }
         @media (max-width: 768px) {
-            padding: 0.6rem 2rem 0.9rem;
+            padding: 0.6rem 2rem 0.8rem;
             font-size: 14px;
             margin-top: -5px;
         }

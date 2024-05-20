@@ -62,7 +62,10 @@ header{
                         -o-transition: 0.3s ease-in-out;
                         transition: 0.3s ease-in-out;
                         text-decoration: none;
-
+                        &:hover{
+                            background:var(--site-color-primary-hover);
+                            border-color:var(--site-color-primary-hover);
+                        }
                     }
 
                 }

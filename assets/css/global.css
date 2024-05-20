@@ -17024,10 +17024,10 @@ header {
 }
 #desktop-menu ul.navbar-nav > li > a.dropdown-toggle::after {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   margin-left: 1px;
-  margin-top: 1px;
+  margin-top: 0;
   vertical-align: middle;
   content: "";
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14" fill="none"><path d="M22.0964 2.26436L12.0118 12.5109L1.74743 2.24659" stroke="%231f1845" stroke-width="2.62869" stroke-linecap="round" stroke-linejoin="round"/></svg>');

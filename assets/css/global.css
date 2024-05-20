@@ -17163,8 +17163,8 @@ footer {
 }
 .footer-cs .footer-heading {
   font-weight: 500;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
   margin-bottom: 20px;
 }
 .footer-cs .footer-heading .logo {
@@ -17174,6 +17174,10 @@ footer {
 .footer-cs a {
   color: #fff;
   font-size: 14px;
+}
+.footer-cs a:hover {
+  color: #ff6c00 !important;
+  opacity: 0.9;
 }
 .footer-cs p {
   color: #fff;

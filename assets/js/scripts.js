@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainElement = document.querySelector('.section-hero-cover');
         if (mainElement) {
             if (Math.random() < 0.30) { //30%
-                mainElement.classList.add('hero-woman');
+                //mainElement.classList.add('hero-woman');
             } 
         }
     }
@@ -22,6 +22,15 @@ $(document).ready(function() {
     /* Função para animar imagens */
     iniciar_animacao(100,"animated");
 
+});
+
+/* Exibe Menu Flutuante */
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 100) {
+        $('#desktop-menu').addClass('fixed');
+    }else{
+        $('#desktop-menu').removeClass('fixed');
+    }
 });
 
 

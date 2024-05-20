@@ -195,6 +195,7 @@ a{
 
     position:relative;
     background:#F5F6FA;
+    z-index: 0;
 
     .fs-custom{
         font-family: var(--var-ff-poppins);

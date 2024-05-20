@@ -16953,9 +16953,27 @@ header {
 }
 
 #desktop-menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  min-height: 70px;
+  box-shadow: 0 2px 4px rgba(3, 27, 78, 0.1);
+  z-index: 2;
   /*Menu Links*/
   /*Menu DropDown Links*/
   /*Navigation Toggler*/
+}
+#desktop-menu.fixed { /*Menu Principal Fixed*/
+  position: fixed;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(3, 27, 78, 0.1);
+  box-shadow: 0 2px 4px rgba(3, 27, 78, 0.1);
+  -webkit-animation: navbarFixed 0.8s;
+  animation: navbarFixed 0.8s;
+  z-index: 2;
+  margin-top: -1px;
 }
 #desktop-menu ul.navbar-nav > li {
   margin-left: 5px;
@@ -17525,6 +17543,7 @@ a {
 .section-vantagens {
   position: relative;
   background: #F5F6FA;
+  z-index: 0;
 }
 .section-vantagens .fs-custom {
   font-family: var(--var-ff-poppins);

@@ -7,9 +7,30 @@ header{
 }
 
 
+$menu-size-height:70px;
 
 
 #desktop-menu{
+
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    background:#fff;
+    min-height:$menu-size-height; 
+    box-shadow:0 2px 4px rgb(3 27 78 / 10%);
+    z-index:2;
+
+    &.fixed{ /*Menu Principal Fixed*/
+        position:fixed;
+        background:#fff;
+        -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+        box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+        -webkit-animation: navbarFixed 0.8s;
+        animation: navbarFixed 0.8s;
+        z-index:2;
+        margin-top:-1px;
+    }
 
 
         /*Menu Links*/
@@ -208,7 +229,6 @@ header{
 * OffCanvas Menu Mobile
 *
 */
-$menu-size-height:70px;
 #mobile-menu {
 
     .modal-backdrop{

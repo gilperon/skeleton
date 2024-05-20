@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleMainClass() {
         const mainElement = document.querySelector('.section-hero-cover');
         if (mainElement) {
-            if (Math.random() < 0.50) {
+            if (Math.random() < 0.30) { //30%
                 mainElement.classList.add('hero-woman');
             } 
         }

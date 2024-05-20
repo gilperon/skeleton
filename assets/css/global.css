@@ -17392,7 +17392,7 @@ a {
 
 .section-hero-cover {
   position: relative;
-  background-image: linear-gradient(to bottom, #080808 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-mobile-min.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-mobile-min.png);
   background-size: cover;
   background-position: bottom -50px center;
   background-repeat: no-repeat;
@@ -17411,7 +17411,7 @@ a {
 }
 .section-hero-cover.hero-woman {
   min-height: 750px;
-  background-image: linear-gradient(to bottom, #080808 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman-mobile-min.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 20%, rgba(60, 60, 60, 0.35) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-woman-mobile-min.png);
 }
 @media (min-width: 768px) {
   .section-hero-cover.hero-woman {

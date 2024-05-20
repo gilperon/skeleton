@@ -195,3 +195,99 @@ header{
         transform: translateY(0);
     }
 }
+
+
+
+
+
+
+
+
+/*
+*
+* OffCanvas Menu Mobile
+*
+*/
+$menu-size-height:70px;
+#mobile-menu {
+
+    .modal-backdrop{
+        z-index:1;
+    }
+
+    /*
+    *
+    * OffCanvas BootStrap Override Styles
+    *
+    */
+        .offcanvas.offcanvas-end {width: 270px;}
+        .offcanvas-header {height:$menu-size-height;min-height:$menu-size-height;}
+        .offcanvas-body {padding: 1rem 0.5rem; }
+        .btn-close {
+            border-color: transparent;
+            background-size: 14px;
+            opacity:1;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .offcanvas-footer {
+            background: #f5f6fa;
+            padding: 18px;
+            border-top: 1px solid #f2f2f2;
+            a {
+                font: 15px "Open Sans",sans-serif;
+                color: #1f1845;
+                &:hover {
+                    text-decoration: underline;
+                }
+                >i {
+                    font-size: 14px;
+                    margin-right: 6px;
+                    margin-left: -15px;
+                }
+            }
+        }
+
+
+
+    /*
+    *
+    * Mobile OffCanvas Menu Custom
+    *
+    */
+        .logo {width: 95px;height: 29px;}
+        .div-cta {
+            background: #f5f7f9;
+            border-top: 1px solid #e9eaec;
+            border-bottom: 1px solid #e9eaec;
+            padding: 0.6rem;
+        }
+        .btn-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height:40px;
+            padding: 8px 20px 9px 8px;
+            padding-left: 10px;
+            width: 95%;
+            max-width: 236px;
+            text-align: center;
+            font: 500 14px/18px 'MontSerrat',Arial,sans-serif;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
+            background: #ef5929;
+            white-space: nowrap;
+            &:hover {
+                background: #1a1a1a;
+            }
+            .arrow {
+                font-size: 26px;
+            }
+            .space {
+                margin-right: 32px;
+            }
+        }
+}

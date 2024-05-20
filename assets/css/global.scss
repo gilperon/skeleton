@@ -5,6 +5,9 @@
 // Import Bootstrap
 @import "../../vendor/bootstrap-5.3.3/scss/bootstrap";
 
+// Define Custom and Specific CSS Rules to this Project
+@import "_custom_utilities";
+
 // Import Custom Settings after importing Bootstrap to override default  
 @import "_custom";
 @import "_footer";
@@ -22,12 +25,14 @@
     --var-menu-height:70px;
     --var-site-primary-color:#ff6c00;
     --site-color-primary-hover:#df5c00;
+
 }
 
 html,body{
     overflow-x: hidden;
 }
 
+// Global Customs
 .fc-gradient{
     color: transparent;
     background:#ff6c00;
@@ -37,6 +42,7 @@ html,body{
 }
 
 
+// Sections
 
 .section-navigation{
     background:#fff;box-shadow:0 10px 50px rgba(0, 0, 0, 0.08);
@@ -47,6 +53,9 @@ html,body{
 }
 
 
+#negotiation{
+    background:#F5F6FA;
+}
 .section-hero-cover{
     position:relative;
     background-image: linear-gradient(to bottom,#080808 20%,rgba(60,60,60,.35) 40%,rgba(0,0,0,.01) 80%,#000), url(../img/hero-cover-mobile-min.png);
@@ -125,7 +134,6 @@ html,body{
     }
 
     @media (min-width: 768px) {
-
         .wrap-content{
             h1{
                 font-size: 2.6rem;
@@ -186,80 +194,56 @@ html,body{
 
 
 
-
 .section-vantagens{
 
     position:relative;
     background:#F5F6FA;
 
-    --var-main-font-regular: Poppins;
-
-    .display-cs {
-        line-height: 0.92;
-        font-family: var(--var-main-font-regular);
+    .fs-custom{
+        font-family: var(--var-ff-poppins);
         color:#000;
-        margin-bottom:2rem;
-        letter-spacing: -1px;;
-    }
-
-    .btn-cs {
-        border-radius: 5px;
-        padding: 0.8rem 1.2rem;
-        font-size: 16px;
-        width: fit-content;
-        background: #000;
-        margin-top:-20px;
-        &:hover {
-            opacity:.75;
+        margin-bottom:1rem;
+        letter-spacing: -1px;
+        @media (max-width: 768px) {
+            margin-top:-8px;
+            font-size:calc(1.375rem + 1.85vw);
+            margin-bottom:1rem;
+            line-height: 1.2;
         }
     }
-
-    @media (max-width: 768px) {
-        .display-cs {
-            font-size:40px;
-        } 
-        .btn-cs {
-            padding: 0.6rem 1.15rem 0.7rem;
-            font-size: 14px;
-            margin-top: -5px;
-            width: 100%;
-        }
-    }
-
+    
     .push-notification{
         position:absolute;top: 70px;right: 0;z-index:1;border-radius:5px;
         img{zoom:.65}
         @media (max-width: 768px) {
-            position:absolute;top: -5px;left: -10px;z-index:1;border-radius:5px;
-            img{zoom:.62}
+            position:absolute;top: -20px;left: -10px;z-index:1;border-radius:5px;
+            img{zoom:.65}
         }
     }
 
     .img-revert{
         margin-top:-20px;
         transform: scale(-1, 1); max-width: 450px; object-fit: contain; display: flex; align-self: start; 
+        margin-bottom:20px;
         @media (max-width: 768px) {
-            margin-top:-20px;
+            margin-top:-35px;
             transform: none; 
             max-width: 100%;
+            margin-bottom:10px;
         }
     }
 
-    /* Grid For desktop */
-    .grid-container {
+    .grid-container { // Grid Desktop
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         width:100%;
     }
     .grid-item {
-        padding: 40px;
+        padding: 15px 25px 28px;
         background:#fff;
-        zoom:.8;
     }
-
-    /* Grid For Mobile */
-    @media (max-width: 768px) {
+    @media (max-width: 768px) { //Grid Mobile
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
@@ -267,126 +251,121 @@ html,body{
             margin:0 auto;
         }
         .grid-item {
-            padding: 20px 25px 30px;
+            padding: 18px 24px 28px;
         }
     }
 
-    .box-number{
+    .box-cs{
         display:flex;
         justify-content: center;
         align-items: start;
         flex-direction: column;
+        zoom:.9;
         > div{
-            &:first-child{
-                font-family: var(--var-main-font-light);
-                color:#C12746;
+            font-family: "Inter", Arial, sans-serif;
+            color:#000;
+            &:nth-child(1){
+                height: 50px;
+                display: flex;
+                align-items: center;
+                margin-bottom:0.5rem;
             }
             &:nth-child(2){
-                font-size:16px;
-                font-family: "Inter", Arial, sans-serif;
-                color:#000;
+                font-size:15px;
                 font-weight: 700;
+                @media (max-width: 768px) { font-size:15px; }
             }
             &:nth-child(3){
-                font-size:16px;
-                font-family: "Inter", Arial, sans-serif;
-                color:#000;
+                font-size:14px;
+                @media (max-width: 768px) { font-size:13px; }
             }
-            &:last-child{
-                margin-top: 20px;
+            &.hr-cs{
+                margin-top: 15px;
                 width: 70px;
                 height: 3px;
-                background: #ddd;
+                background: #ebecf1;
                 border-radius: 5px;
                 display: block;
             }
         }
 
-        //Mobile
-        @media (max-width: 768px) {
-
-            > div{
-                &:first-child{
-                    font-family: var(--var-main-font-light);
-                    color:#C12746;
-                }
-                &:nth-child(2){
-                    font-size:16px;
-                    font-family: "Inter", Arial, sans-serif;
-                    color:#000;
-                    font-weight: 700;
-                }
-                &:nth-child(3){
-                    font-size:16px;
-                    font-family: "Inter", Arial, sans-serif;
-                    color:#000;
-                }
-                &:last-child(3){
-                    margin-top: 15px;
-                    width: 50px;
-                    height: 2px;
-                    background: #C12746;
-                    border-radius: 5px;
-                    display: block;
-                }
-            }
-
-        }
     }
 
 }
 
 
 
-.section-cover-orange{
+.section-cover-livre{
     
-    position:relative;
+    position:relative;    
     //background:url('https://assets-global.website-files.com/6143565787b5546c16508505/6144dca1557cc5cbaaeef191_bg-1-cta-construction-x-template.svg') no-repeat left bottom #ff6c00;
     //background-size:600px;
-    
     background-image: linear-gradient(to bottom, rgb(130 48 0 / 50%) 0%, rgb(180 68 3 / 90%) 100%), url(https://www.ewally.com.br/wp-content/uploads/2023/06/use-cases-fintech.jpg);
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: bottom center;
+    background-position: center center;
     background-color:#ff6c00;
 
-    .display-cs {
-        line-height: 1.2;
-        font-family: var(--var-main-font-light);
-        font-weight: 300;
+
+    .fs-custom{
+        font-family: var(--var-ff-bootstrap);
         color:#fff;
-        margin-bottom:2.2rem;
-        max-width: 600px;
-        font-size:2.6rem;
-        //Mobile
+        font-weight: 300;
+        font-size:2.8rem;
+        letter-spacing: -1px;
+        margin-top:-15px;
+        margin-bottom:1.4rem;
         @media (max-width: 768px) {
             font-size:30px;
-            font-family: var(--var-main-font-light);
-            margin-bottom:2.2rem;
+            margin-top:-5px;
+            margin-bottom:1.4rem;
         }
-            span{
-                font-family: var(--var-main-font-bold);
-                font-weight: 700;
-            }
+        span{
+            font-weight: bold;
+        }
     }
 
     .btn-cs {
-        border-radius: 5px;
+        border-radius: 30px;
         padding: 0.8rem 2.2rem 0.9rem;
         font-size: 16px;
         width: fit-content;
         margin: 0 auto;
-        background: rgba(0,0,0,.35);
+        background: rgba(0,0,0,.5);
         border:0;
         white-space:nowrap;
-        &:hover {
+        color:#fff;
+        &:hover,&:active,&:focus {
             background: rgba(0,0,0,.95);
+            color:#fff;
+        }
+        @media (max-width: 768px) {
+            padding: 0.6rem 2rem 0.9rem;
+            font-size: 14px;
+            margin-top: -5px;
         }
     }
 
-    @media (max-width: 768px) {
-        .btn-cs {
-            padding: 0.6rem 1.5rem 0.7rem;
+}
+
+.section-cover-prioridade{
+
+    .btn-cs {
+        padding: 0.8rem 1.5rem 0.9rem;
+        font-size: 16px;
+        width: fit-content;
+        margin: 0 auto;
+        white-space: nowrap;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 2px;
+        color: #000;
+        &:hover,&:active,&:focus {
+            background: rgba(0,0,0,.95);
+            color:#fff;
+        }
+        @media (max-width: 768px) {
+            padding: 0.6rem 2rem 0.9rem;
             font-size: 14px;
             margin-top: -5px;
         }

@@ -5,25 +5,34 @@
     --site-color-primary:#ff6c00 ;
     --site-color-primary-hover:#df5c00;
     --site-color-black: #000;
+
+    // font family
+    --var-ff-montserrat: 'MontSerrat', Arial, Helvetica, sans-serif;
+    --var-ff-inter: 'Inter', Arial, Helvetica, sans-serif;
+    --var-ff-bootstrap: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --var-ff-poppins: 'Poppins', Arial, Helvetica, sans-serif;
+    --var-ff-rubik: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
-
-.ff-family{
-    font-family: 'MontSerrat', Arial, Helvetica, sans-serif;
+.ff-montserrat {
+    font-family: var(--var-ff-montserrat);
 }
 
-.ff-inter{
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+.ff-inter {
+    font-family: var(--var-ff-inter);
 }
 
-.ff-bootstrap{
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.ff-bootstrap {
+    font-family: var(--var-ff-bootstrap);
 }
 
-.ff-rubik{
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+.ff-rubik {
+    font-family: var(--var-ff-rubik);
 }
 
+.ff-poppins {
+    font-family: var(--var-ff-poppins);
+}
 
 
 

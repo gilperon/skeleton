@@ -1,0 +1,44 @@
+// Create Font-size responsive, ie .fs-md-1
+$utilities: map-merge(
+        $utilities,
+        (
+            "font-size": map-merge(
+                    map-get($utilities, "font-size"),
+                    (
+                        responsive: true,
+                        values: $font-sizes
+                    )
+            )
+        )
+);
+// Create w-size responsive, ie .w-md-75
+$widths: (
+    "25": 25%,
+    "50": 50%,
+    "75": 75%,
+    "80": 80%,
+    "85": 85%,
+    "90": 90%,
+    "95": 95%,
+    "100": 100%
+);
+$utilities: map-merge(
+    $utilities,
+    (
+        "font-size": map-merge(
+            map-get($utilities, "font-size"),
+            (
+                responsive: true,
+                values: $font-sizes
+            )
+        ),
+        "width": map-merge(
+            map-get($utilities, "width"),
+            (
+                responsive: true,
+                values: $widths
+            )
+        )
+    )
+);
+@import "../../vendor/bootstrap-5.3.3/scss/utilities/api";

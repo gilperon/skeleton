@@ -17400,6 +17400,7 @@ a {
   height: 100dvh;
   padding-top: var(--var-menu-height);
   border-radius: 0 0 40px 40px;
+  background-color: #222;
 }
 @media (min-width: 768px) {
   .section-hero-cover {

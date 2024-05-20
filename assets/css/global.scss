@@ -61,6 +61,7 @@ a{
     height:100dvh;
     padding-top:var(--var-menu-height);
     border-radius:0 0 40px 40px;
+    background-color:#222;
     @media (min-width: 768px) {
         min-height: 100dvh;
         background-image: linear-gradient(to right, #080808 10%, rgba(60, 60, 60, 0.45) 40%, rgba(0, 0, 0, 0.01) 80%, #000), url(../img/hero-cover-min.png);

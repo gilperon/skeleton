@@ -17278,16 +17278,17 @@ header {
   opacity: 0.4;
 }
 #mobile-navigation ul li {
-  padding-left: 18px;
+  padding-left: 6px;
+  margin-left: 6px;
   position: relative;
-  background: #f9f9f9;
-  border-left: 2px solid #ef5929;
+  background: #fbfbfb;
+  border-left: 2px solid #eee;
 }
 #mobile-navigation ul li a {
   display: block;
   font: 500 15px/22px Inter;
   color: #1f1845;
-  padding: 12px 6px 12px;
+  padding: 11px 6px;
   margin-bottom: 4px;
   color: #000;
 }

@@ -17577,6 +17577,12 @@ footer {
   color: #212529;
   letter-spacing: -0.3px;
 }
+@media (max-width: 768px) {
+  .section-parceiros-cover .wrap-content .text-cs {
+    font: 400 16px "Inter";
+    letter-spacing: 0;
+  }
+}
 .section-parceiros-cover .wrap-content input.form-control {
   font: 16px/30px "Inter";
   border-radius: 6px;
@@ -17592,6 +17598,11 @@ footer {
   color: #212529;
   opacity: 0.5;
   font-size: 15px;
+}
+@media (max-width: 768px) {
+  .section-parceiros-cover .wrap-content input.form-control {
+    border-color: #ebebeb;
+  }
 }
 .section-parceiros-cover .wrap-content button.btn-cs {
   width: 100%;

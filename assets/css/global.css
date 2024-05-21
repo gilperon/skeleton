@@ -16883,11 +16883,28 @@ textarea.form-control-lg {
   --site-color-primary:#ff6c00 ;
   --site-color-primary-hover:#df5c00;
   --site-color-black: #000;
+  --var-menu-height:70px;
   --var-ff-montserrat: "MontSerrat", Arial, Helvetica, sans-serif;
   --var-ff-inter: "Inter", Arial, Helvetica, sans-serif;
   --var-ff-bootstrap: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --var-ff-poppins: "Poppins", Arial, Helvetica, sans-serif;
   --var-ff-rubik: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fc-gradient {
+  color: transparent;
+  background: #ff6c00;
+  background: linear-gradient(90deg, #ff6c00 0%, #ffba00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .ff-montserrat {
@@ -16948,7 +16965,7 @@ header {
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
   position: absolute;
   inset: 0;
-  height: var(--var-menu-height);
+  height: 70px;
   z-index: 1;
 }
 
@@ -17207,7 +17224,7 @@ header {
   height: 29px;
 }
 #mobile-menu .div-cta {
-  background: var(--var-site-primary-color);
+  background: var(--site-color-primary);
   padding: 0.6rem;
 }
 #mobile-menu .btn-cta {
@@ -17224,7 +17241,7 @@ header {
   color: #fff !important;
   text-decoration: none;
   border-radius: 4px;
-  background: var(--var-site-primary-color);
+  background: var(--site-color-primary);
   white-space: nowrap;
 }
 #mobile-menu .btn-cta:hover {
@@ -17382,28 +17399,6 @@ footer {
   color: #fff;
 }
 
-:root {
-  --var-menu-height:70px;
-  --var-site-primary-color:#ff6c00;
-  --site-color-primary-hover:#df5c00;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-.fc-gradient {
-  color: transparent;
-  background: #ff6c00;
-  background: linear-gradient(90deg, #ff6c00 0%, #ffba00 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
 #negotiation {
   background: #F5F6FA;
 }
@@ -17450,7 +17445,7 @@ a {
   color: #fff;
 }
 .section-hero-cover .wrap-content h1 span, .section-hero-cover .wrap-content .h1 span {
-  color: var(--var-site-primary-color);
+  color: var(--site-color-primary);
 }
 .section-hero-cover .wrap-content h1 .counter_discount, .section-hero-cover .wrap-content .h1 .counter_discount {
   min-width: 60px;
@@ -17481,7 +17476,7 @@ a {
 }
 .section-hero-cover .wrap-content button.btn-cs {
   width: 100%;
-  background: var(--var-site-primary-color);
+  background: var(--site-color-primary);
   color: #fff;
   padding: 11px;
 }

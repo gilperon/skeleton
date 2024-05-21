@@ -17467,7 +17467,7 @@ footer {
   margin-top: 52px;
 }
 .section-parceiros-cover .wrap-banner-woman .woman-rounded {
-  background: url(/assets/img/illustration-parceiros-min.png) no-repeat top center;
+  background: url(./assets/img/illustration-parceiros-min.png) no-repeat top center;
   background-size: cover;
   border-radius: 0 0 50% 50%;
   width: 325px;

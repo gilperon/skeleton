@@ -17196,7 +17196,7 @@ header {
   z-index: 1;
 }
 #mobile-menu .offcanvas.offcanvas-end {
-  width: 100%;
+  width: 270px;
 }
 #mobile-menu .offcanvas-header {
   height: 70px;

@@ -17916,7 +17916,7 @@ footer {
 
 .section-cover-livre {
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(130, 48, 0, 0.5) 0%, rgba(180, 68, 3, 0.9) 100%), url("/assets/img/bg-full-woman-min.jpg");
+  background-image: linear-gradient(to bottom, rgba(130, 48, 0, 0.5) 0%, rgba(180, 68, 3, 0.9) 100%), url("./assets/img/bg-full-woman-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

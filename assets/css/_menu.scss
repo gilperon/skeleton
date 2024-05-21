@@ -5,7 +5,7 @@ header{
     position:absolute;
     inset:0;
     height:$menu-size-height;
-    z-index:1;
+    z-index:5;
 }
 
 #desktop-menu{
@@ -74,7 +74,7 @@ header{
                         display: block;
                         font: 400 14px / 16px 'Inter';
                         color: #fff;
-                        background: #ff6c00;
+                        background: var(--site-color-primary);
                         padding: 9px 17px 10px;
                         border-radius: 4px;
                         -webkit-transition: 0.3s ease-in-out;
@@ -113,7 +113,7 @@ header{
                 -o-transition: 0.2s ease-in-out;
                 transition: 0.2s ease-in-out;
                 &:hover{
-                    border-left:6px solid #ff6c00;
+                    border-left:6px solid var(--site-color-primary);
                     border-bottom:1px solid #f2f2f2;
                     background:#fff;
                     color:#444;
@@ -238,7 +238,7 @@ header{
     * OffCanvas BootStrap Override Styles
     *
     */
-        .offcanvas.offcanvas-end {width: 250px;}
+         .offcanvas.offcanvas-end {width: 100%;}
         .offcanvas-header {height:$menu-size-height;min-height:$menu-size-height;}
         .offcanvas-body {padding: 1rem 0.5rem; }
         .btn-close {
@@ -402,7 +402,7 @@ header{
                         margin-bottom:4px;
                             color: #000;
                         &:hover {
-                            color: #ef5929;
+                            color: var(--site-color-primary);
                         }
                     }
 

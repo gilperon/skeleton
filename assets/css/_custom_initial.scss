@@ -13,14 +13,46 @@
     --var-ff-bootstrap: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --var-ff-poppins: 'Poppins', Arial, Helvetica, sans-serif;
     --var-ff-rubik: 'Rubik', Arial, Helvetica, sans-serif;
+
+    
 }
+
 
 html,body{
     overflow-x: hidden;
 }
 
+body{
+
+    &.parceiro-bradesco{
+        --site-color-primary:#DF3253 ;
+        --site-color-primary-hover:rgb(196, 33, 63);
+        --site-bg-gradient-livre:rgb(130 0 119 / 50%);
+        .section-vantagens{
+            display:none !important;
+        }
+    }
+
+    &.parceiro-crefaz{
+        --site-color-primary:#2A487E ;
+        --site-color-primary-hover:#2A487E;
+        --site-bg-gradient-livre:rgb(0 76 130 / 50%);
+        .section-vantagens{
+            display:none !important;
+        }
+    }
+
+}
+
+
 a{
     text-decoration: none;
+}
+
+// remove blue chrome on input
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 // Global Customs

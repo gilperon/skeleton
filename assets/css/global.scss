@@ -22,8 +22,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 
-
-
+// Import Página Parceiros
+@import "_parceiros";
 
 
 #negotiation{
@@ -86,11 +86,13 @@
         input.form-control{
             font:16px / 30px 'Inter';
             border-radius:6px;
-            padding:.4rem 1.2rem .375rem;
-            background:#494949;
+            padding:14px 15px 16px;
+            background:#f9f9f9;
             color: #000; 
             width:100%;
+            height: 50px;
             border:0;
+            margin-bottom:15px;
             &::placeholder { 
                 color: #999; 
                 font-size:15px;
@@ -273,10 +275,8 @@
 
 .section-cover-livre{
     
-    position:relative;    
-    //background:url('https://assets-global.website-files.com/6143565787b5546c16508505/6144dca1557cc5cbaaeef191_bg-1-cta-construction-x-template.svg') no-repeat left bottom #ff6c00;
-    //background-size:600px;
-    background-image: linear-gradient(to bottom, rgb(130 48 0 / 50%) 0%, rgb(180 68 3 / 90%) 100%), url(https://www.ewally.com.br/wp-content/uploads/2023/06/use-cases-fintech.jpg);
+    position:relative; 
+    background-image: linear-gradient(to bottom, rgb(130 48 0 / 50%) 0%, rgb(180 68 3 / 90%) 100%), url('/assets/img/bg-full-woman-min.jpg');
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;

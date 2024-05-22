@@ -16904,10 +16904,9 @@ body.parceiro-bradesco .section-vantagens {
   display: none !important;
 }
 body.parceiro-crefaz {
-  --site-color-primary:#2A487E ;
+  --site-color-primary:#446299 ;
   --site-color-primary-hover:#2A487E;
   --site-bg-gradient-livre:rgb(0 76 130 / 50%);
-  --site-color-primary:#446299;
 }
 body.parceiro-crefaz .section-vantagens {
   display: none !important;

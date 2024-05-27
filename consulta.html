@@ -22,6 +22,11 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" />
      <script src="./assets/js/animation-min.js"></script>
 
+     <!-- Datapicker -->
+     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+
 
     <!--Custom-->
     <link rel="stylesheet" href="./assets/css/global.css">
@@ -31,88 +36,101 @@
 </head>
 <body>
 
-    <a href="https://wa.me/5511976330868?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" class="floating-whatsapp" target="_blank" title="Negociar com um atendente"><span></span></a>
 
-    <!--Menu Desktop-->
-    <header id="header-wrap">
-        <nav id="desktop-menu" class="navbar" aria-label="Desktop Menu">
-    
-            <div class="container">
-                <div class="d-flex justify-content-center align-items-center" style="zoom:.95;">
+    <section style="position:relative;background:#fff;box-shadow:0 2px 4px rgba(3, 27, 78, 0.1);border-top:8px solid var(--site-color-primary)">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-4">
+
+                    <div class="d-flex justify-content-center align-items-center logo-datapact" style="zoom:.95;">
                         <!--Logo-->
                         <img src="./assets/img/icon-logo.png" style="width: 35px;margin-right: 3px;">
                         <span class="ff-poppins fw-600" style="font-size: 25px;letter-spacing:-1px;padding-top: 1px;">DataPact</span>
-                </div>
-                <div class="d-flex justify-content-center align-items-center position-relative flex-row-reverse flex-lg-row">
-                    <ul class="navbar-nav d-none d-lg-flex flex-row">
-                        <li><a href="./">Inicio</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Parceiros
-                            </a>
-                            <ul class="dropdown-menu dropdown-caret position-absolute" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./crefaz.html">Crefaz</a></li>
-                                <li><a class="dropdown-item" href="./bradesco.html">Bradesco</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="btn-cs" style="margin-top:2px;">Ver dívidas</a></li>
-                    </ul>
-                    <!--Toggle-->
-                    <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> 
-                </div>
-            </div>
-        </nav>
-    </header>
+                    </div>
 
-
-    <!--Menu Mobile-->
-    <aside id="mobile-menu">
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-        <!--Logo-->
-        <img src="./assets/img/icon-logo.png" style="width: 35px;">
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    
-        <div class="d-flex justify-content-center align-items-center div-cta">
-            <a href="./buscar.html" class="btn-cta">
-                <span class="icon-search"></span> Buscar minhas dívidas
-            </a>
-        </div>
-        <div class="offcanvas-body offcanvas-scrollbar">
-        <nav id="mobile-navigation">
-            <a href="./"><i class="bi-house icone"></i>Início</a>
-            <!--Drop-1-->
-            <a href="#drop-1" id="produtos-drop" data-bs-toggle="collapse" aria-expanded="false">
-                <i class="bi-layers"></i>Parceiros
-                <span class="arrow-nav"></span>
-            </a>
-            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
-                <li><a href="./crefaz.html">Crefaz</a></li>
-                <li><a href="./bradesco.html">Bradesco</a></li>
-            </ul>
-            <hr class="divider">
-            <a href="https://www.ph3a.com.br/"><i class="bi-window"></i>Suporte</a>
-        </nav>
-        </div>
-    </div>
-    </aside>
-
-
-
-
-    <section class="mt-5 pb-5" style="padding-top:70px;background:#E9E8E7;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-
-
-                    <div style="width:500px;height:500px;background:#fff;">a</div>
+                    <img class="logo-parceiro-bradesco" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height: 26px;margin:0 auto;display:none;">
+                    <img class="logo-parceiro-crefaz" src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height: 45px;margin:0 auto;display:none;">
 
                 </div>
             </div>
         </div>
     </section>
+
+
+    <section style="background:#E9E8E7;" class="pb-0 pb-md-5">
+        <div class="container p-0 px-md-4" style="max-width: 560px;">
+            <div class="row">
+                <div class="col-12 text-center py-4">
+
+                    <div class="progress-bar-cs step-progress-bar mb-0">
+                        <div class="stepper-item completed">
+                            <div class="step-circle">
+                                <svg width="512" viewBox="0 0 515.556 515.556" height="512" xmlns="http://www.w3.org/2000/svg" class="step-check-icon">
+                                    <path xmlns="http://www.w3.org/2000/svg" d="m0 274.226 176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z" fill="#374957"></path>
+                                </svg>
+                            </div>
+                            <div class="step-name">Início</div>
+                        </div>
+                        <div class="stepper-item active">
+                            <div class="step-circle"><!----></div>
+                            <div class="step-name">Consulta</div>
+                        </div>
+                        <div class="stepper-item">
+                            <div class="step-circle"><!----></div>
+                            <div class="step-name">Ver dívidas</div>
+                        </div>
+                        <div class="stepper-item">
+                            <div class="step-circle"><!----></div>
+                            <div class="step-name">Negociar</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+
+                    <div class="box-cs">
+                        <div>
+                            <h1>Consultar dívidas</h1>
+                            <span>Insira os  dados para consultar</span>
+                        </div>
+                        <div id="div-cpf">
+                            <label for="cpf">CPF</label>
+                            <input type="text" tabindex="1" class="form-control _input-custom ignore" placeholder="Digite seu CPF" id="cpf" name="cpf">
+                            <div class="_err">Digite um cpf válido</div>
+                        </div>
+                        <div id="div-cnpj" style="display:none;">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" tabindex="1" class="form-control _input-custom ignore" placeholder="Digite o CNPJ" id="cnpj" name="cnpj">
+                            <div class="_err">Digite um cnpj válido</div>
+                        </div>
+                        <div id="div-data" class="position-relative">
+                            <label for="data">Data de Nascimento</label>
+                            <input type="text" tabindex="1" class="form-control _input-custom ignore" autocomplete="off" placeholder="--/--/----" id="data" name="data">
+                            <div class="_err">Digite uma data válida</div>
+                            <div class="icn_pass icn_pass_show" id="openDate"></div>
+                        </div>
+                        <div class="pt-4 pb-3 mb-0">
+                            <button tabindex="3" type="submit" class="btn animate-up-2 _btn-custom">Consultar</button>
+                        </div>
+                        <div>
+                            <span class="_link" id="link-cpf">É pessoa jurídica? <a href="#" onclick="toggleBox('cnpj')">Entrar com CNPJ</a></span>
+                            <span class="_link" id="link-cnpj" style="display:none;">É pessoa física? <a href="#" onclick="toggleBox('cpf')">Entrar com CPF</a></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5511976330868?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" class="floating-whatsapp" target="_blank" title="Negociar com um atendente"><span></span></a>
+
+
+
+
 
 
     <footer class="footer-cs">

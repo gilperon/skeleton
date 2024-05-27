@@ -116,6 +116,9 @@ $(document).ready(function() {
     if (typeof Pikaday !== 'undefined') {
         var picker = new Pikaday({
             field: document.getElementById('data'),
+            defaultDate: new Date(),   
+            setDefaultDate: true,     
+            yearRange: [1950, new Date().getFullYear()],
             format: 'DD/MM/YYYY',
             toString(date, format) {
                 const day = String(date.getDate()).padStart(2, '0');

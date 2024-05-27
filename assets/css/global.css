@@ -17039,6 +17039,22 @@ input:focus {
   display: none;
 }
 
+.btn-cs-outline {
+  padding: 0.8rem 1.5rem 0.9rem;
+  font-size: 16px;
+  width: fit-content;
+  margin: 0 auto;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 2px;
+  color: #000;
+}
+.btn-cs-outline:hover, .btn-cs-outline:focus {
+  background: #f2f2f2;
+  border: 1px solid #000;
+}
+
 header {
   background: #fff;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
@@ -18505,6 +18521,83 @@ footer {
 }
 .section-consulta .box-form > div .icn_pass.icn_pass_show {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%232E2D3"><path d="M324.21-410.31q-12.9 0-22.25-9.13-9.34-9.14-9.34-22.04 0-12.9 9.13-22.25 9.14-9.35 22.04-9.35 12.9 0 22.25 9.14 9.34 9.13 9.34 22.04 0 12.9-9.13 22.25-9.14 9.34-22.04 9.34Zm156 0q-12.9 0-22.25-9.13-9.34-9.14-9.34-22.04 0-12.9 9.13-22.25 9.14-9.35 22.04-9.35 12.9 0 22.25 9.14 9.34 9.13 9.34 22.04 0 12.9-9.13 22.25-9.14 9.34-22.04 9.34Zm156 0q-12.9 0-22.25-9.13-9.34-9.14-9.34-22.04 0-12.9 9.13-22.25 9.14-9.35 22.04-9.35 12.9 0 22.25 9.14 9.34 9.13 9.34 22.04 0 12.9-9.13 22.25-9.14 9.34-22.04 9.34ZM228.31-116q-27.01 0-45.66-19Q164-154 164-180.31v-503.38Q164-710 182.65-729q18.65-19 45.66-19h87.38v-100.61h53.54V-748h223.08v-100.61h52V-748h87.38q27.01 0 45.66 19Q796-710 796-683.69v503.38Q796-154 777.35-135q-18.65 19-45.66 19H228.31Zm0-52h503.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-335.38H216v335.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM216-567.69h528v-116q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H228.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v116Zm0 0V-696v128.31Z"/></svg>');
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.grid-container b {
+  display: block;
+}
+
+.grid-item {
+  padding: 15px 25px 28px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .grid-item {
+    padding: 18px 24px 28px;
+  }
+}
+.box-cs {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  zoom: 0.9;
+}
+.box-cs > div {
+  font-family: "Inter", Arial, sans-serif;
+  color: #000;
+}
+.box-cs > div:nth-child(1) {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.box-cs > div:nth-child(2) {
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .box-cs > div:nth-child(2) {
+    font-size: 15px;
+  }
+}
+.box-cs > div:nth-child(3) {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .box-cs > div:nth-child(3) {
+    font-size: 13px;
+  }
+}
+.box-cs > div.hr-cs {
+  margin-top: 15px;
+  width: 70px;
+  height: 3px;
+  background: #ebecf1;
+  border-radius: 5px;
+  display: block;
+}
+.box-cs svg {
+  stroke: var(--site-color-primary) !important;
+}
+.box-cs .svg-clock {
+  stroke: none !important;
+  fill: var(--site-color-primary) !important;
 }
 
 /*Custom Inputs and Override BS styles*/

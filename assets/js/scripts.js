@@ -189,7 +189,7 @@ $(document).ready(function() {
 
     }
 
-    if (window.location.pathname.includes('listagem-parceiros.html')) {
+    if (window.location.pathname.includes('listagem-parceiros.html') || window.location.pathname.includes('negociacao.html')) {
         let params = getURLParams();
         if(params.theme && params.theme!=='undefined'){
             $('body').addClass(params.theme);

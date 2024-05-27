@@ -1,9 +1,25 @@
 
 
-//Refinando
+
 .box-cs{
-background:#fff;min-height: 300px; width: 100%;clip-path: polygon(100% 0,100% calc(100% - 45px),calc(100% - 35px) 100%,0 100%,0 0);
+position: relative;
+background:#fff;min-height: 300px; width: 100%;
+clip-path: polygon(100% 0,100% calc(100% - 45px),calc(100% - 35px) 100%,0 100%,0 0);
 padding:clamp(30px,3vw,40px) clamp(32px,3vw,50px);
+transform-style:preserve-3d;
+&::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 50px;
+    right: -70px;
+    background: #C8C8C8;
+    border-radius: 50%;
+    transform: translateZ(-1px);
+    opacity: .5;
+    display:none;
+}
 > div{
     margin-bottom:20px;
     &:last-child{

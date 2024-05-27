@@ -64,11 +64,15 @@
                             </div>
                             <div class="step-name">Início</div>
                         </div>
-                        <div class="stepper-item active">
-                            <div class="step-circle"><!----></div>
+                        <div class="stepper-item completed">
+                            <div class="step-circle">
+                                <svg width="512" viewBox="0 0 515.556 515.556" height="512" xmlns="http://www.w3.org/2000/svg" class="step-check-icon">
+                                    <path xmlns="http://www.w3.org/2000/svg" d="m0 274.226 176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z" fill="#374957"></path>
+                                </svg>
+                            </div>
                             <div class="step-name">Consulta</div>
                         </div>
-                        <div class="stepper-item">
+                        <div class="stepper-item active">
                             <div class="step-circle"><!----></div>
                             <div class="step-name">Ver dívidas</div>
                         </div>
@@ -89,38 +93,40 @@
 
                     <div class="box-form">
                         <div>
-                            <h1>Consultar dívidas</h1>
-                            <span>Insira os  dados para consultar</span>
+                            <h1>Pronto!</h1>
+                            <span>Agora, escolha um parceiro e comece a negociar</span>
                         </div>
-                        <div id="div-cpf">
-                            <label for="cpf">CPF</label>
-                            <input type="text" tabindex="1" class="form-control _input-custom ignore" placeholder="Digite seu CPF" id="cpf" name="cpf">
-                            <div class="_err">Digite um cpf válido</div>
-                        </div>
-                        <div id="div-cnpj" style="display:none;">
-                            <label for="cnpj">CNPJ</label>
-                            <input type="text" tabindex="1" class="form-control _input-custom ignore" placeholder="Digite o CNPJ" id="cnpj" name="cnpj">
-                            <div class="_err">Digite um cnpj válido</div>
-                        </div>
-                        <div id="div-data" class="position-relative">
-                            <label for="data">Data de Nascimento</label>
-                            <input type="text" tabindex="1" class="form-control _input-custom ignore" autocomplete="off" placeholder="--/--/----" id="data" name="data">
-                            <div class="_err">Digite uma data válida</div>
-                            <div class="icn_pass icn_pass_show" id="openDate"></div>
-                        </div>
-                        <div class="pt-4 pb-3 mb-0">
-                            <button tabindex="3" type="submit" class="btn animate-up-2 _btn-custom" onclick="window.location.href = './listagem-parceiros.html?theme=' + encodeURIComponent($('body').attr('class'))">Consultar</button>
-                        </div>
+                        <!-- <div class="divider-cs my-1 fs-6">&nbsp;&nbsp;  &nbsp;&nbsp;</div> -->
                         <div>
-                            <span class="_link" id="link-cpf">É pessoa jurídica? <a onclick="toggleBox('cnpj')">Entrar com CNPJ</a></span>
-                            <span class="_link" id="link-cnpj" style="display:none;">É pessoa física? <a onclick="toggleBox('cpf')">Entrar com CPF</a></span>
+                            
+
+                            <div class="box-partners">
+                                <img src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height: 34px;margin-top: 10px;margin-left: 6px;">
+                                <div><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"></path></svg></div>
+                            </div>
+
+                            <div class="box-partners">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height: 20px;margin-top: -2px;margin-left: 6px;">
+                                <div><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"></path></svg></div>
+                            </div>
+
+
+
+
+
+
                         </div>
+                        <!-- <div class="divider-cs my-1 fs-6">&nbsp;&nbsp;  &nbsp;&nbsp;</div> -->
                     </div>
                     
                 </div>
             </div>
         </div>
     </section>
+
+ 
+
+
 
     <a href="https://wa.me/5511976330868?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es" class="floating-whatsapp" target="_blank" title="Negociar com um atendente"><span></span></a>
 

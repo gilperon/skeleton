@@ -13,6 +13,9 @@
 @import "_menu";
 @import "_footer";
 
+// Dependencies
+@import "_utilities";
+
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
@@ -25,8 +28,8 @@
 // Import Página Parceiros
 @import "_parceiros";
 
-// Import Página Login
-@import "_login";
+// Import Página Consulta
+@import "_consulta";
 
 
 #negotiation{
@@ -329,6 +332,11 @@
 }
 
 .section-cover-prioridade{
+
+    background:#fff;
+    &.bg-cover-custom{
+        background:#F7F7F7;
+    }
 
     .wrap-content{
         .fs-custom{

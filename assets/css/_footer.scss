@@ -11,6 +11,10 @@ $white: #fff;
 
 .footer-cs{
 
+    &.footer-mini{
+        position:absolute;bottom:0;left:0;width:100%;padding:1.5rem 1.5rem .8rem !important;
+    }
+
     position: relative;
     background-color:#161616;
 

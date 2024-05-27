@@ -18549,6 +18549,7 @@ footer {
   }
   .grid-item {
     padding: 18px 24px 28px;
+    margin-bottom: 20px;
   }
 }
 .box-cs {

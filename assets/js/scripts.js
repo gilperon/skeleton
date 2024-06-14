@@ -226,7 +226,7 @@ $(document).ready(function() {
 
 
     $('#slider-contratos').owlCarousel({
-        stagePadding: 16,
+        stagePadding: 10,
         loop:false,
         margin:10,
         dots:false,
@@ -236,10 +236,10 @@ $(document).ready(function() {
                 items:1
             },
             600:{
-                items:3
+                items:4
             },
             1000:{
-                items:3
+                items:4
             }
         }
     })

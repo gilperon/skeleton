@@ -1,7 +1,9 @@
 $menu-size-height:70px;
 
 header{
-    background:#fff;box-shadow:0 10px 50px rgba(0, 0, 0, 0.08);
+    background:#fff;
+    box-shadow:0 10px 50px rgba(0, 0, 0, 0.08);
+    box-shadow:0 0 30px rgb(115 128 157 / 10%);
     position:absolute;
     inset:0;
     height:$menu-size-height;
@@ -17,6 +19,7 @@ header{
     background:#fff;
     min-height:$menu-size-height; 
     box-shadow:0 2px 4px rgb(3 27 78 / 10%);
+    box-shadow:0 0 30px rgb(115 128 157 / 10%);
     z-index:2;
 
     &.fixed{ /*Menu Principal Fixed*/
@@ -24,6 +27,7 @@ header{
         background:#fff;
         -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
         box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+        box-shadow:0 0 30px rgb(115 128 157 / 10%);
         -webkit-animation: navbarFixed 0.8s;
         animation: navbarFixed 0.8s;
         z-index:2;

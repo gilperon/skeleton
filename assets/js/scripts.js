@@ -182,14 +182,14 @@ $(document).ready(function() {
         window.location.href = './consulta.html?name=' + encodeURIComponent(inputValue) +'&theme=' + $('body').attr('class') + '';
     });
 
-    // Monitor all link clicks
-    $('a').click(function(event) {
-        var targetUrl = $(this).attr('href');
-        if (targetUrl.includes('./consulta.html')) {
-            event.preventDefault();
-            window.location.href = './consulta.html?theme=' + $('body').attr('class') + '';
-        }
-    });
+    // // Monitor all link clicks
+    // $('a').click(function(event) {
+    //     var targetUrl = $(this).attr('href');
+    //     if (targetUrl.includes('./consulta.html')) {
+    //         event.preventDefault();
+    //         window.location.href = './consulta.html?theme=' + $('body').attr('class') + '';
+    //     }
+    // });
 
 
     if (window.location.pathname.includes('listagem-parceiros.html') || window.location.pathname.includes('negociacao.html')) {

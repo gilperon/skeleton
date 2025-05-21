@@ -1,0 +1,124 @@
+<div class="cs-container cs-py-4">
+  <h1 class="cs-mb-4">Detalhamento do Job: Upload de Arquivos</h1>
+  <div class="cs-row cs-g-4">
+    <div class="cs-col-12 cs-col-lg-6">
+      <div class="cs-card cs-mb-4">
+        <div class="cs-card-header">
+          <h5 class="cs-card-title cs-mb-0">Upload de Arquivos</h5>
+        </div>
+        <div class="cs-card-body">
+          <p class="cs-card-text cs-text-muted cs-mb-4">Faça upload dos arquivos para processamento. O arquivo positivo é obrigatório.</p>
+          <form>
+            <div class="cs-mb-3">
+              <label for="positiveFile" class="cs-form-label cs-fw-medium">Arquivo Positivo <span class="cs-text-danger">*</span></label>
+              <div class="cs-input-group cs-mb-1">
+                <input id="positiveFile" accept=".csv,.txt" class="cs-form-control" type="file">
+              </div>
+              <div class="cs-form-text">Mínimo de 3.000 registros. Formatos aceitos: CSV, TXT</div>
+            </div>
+            <div class="cs-mb-3">
+              <label for="negativeFile" class="cs-form-label cs-fw-medium">Arquivo Negativo (Opcional)</label>
+              <div class="cs-input-group cs-mb-1">
+                <input id="negativeFile" accept=".csv,.txt" class="cs-form-control" type="file">
+              </div>
+              <div class="cs-form-text">Formatos aceitos: CSV, TXT</div>
+            </div>
+            <div class="cs-d-grid">
+              <button type="submit" class="cs-btn cs-btn-primary" disabled="">
+                <span class="cs-d-flex cs-align-items-center cs-justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="cs-bi cs-bi-upload cs-me-2" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                  </svg>
+                  Enviar Arquivos
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="cs-card cs-mt-4">
+        <div class="cs-card-header">
+          <h5 class="cs-card-title cs-mb-0">Estatísticas do Job</h5>
+        </div>
+        <div class="cs-card-body">
+          <p class="cs-card-text cs-text-muted cs-mb-4">Visão geral do processamento atual</p>
+          <div class="cs-mb-4">
+            <div class="cs-d-flex cs-justify-content-between cs-mb-1">
+              <span class="cs-fw-medium">Progresso Geral</span>
+              <span class="cs-fw-medium">82%</span>
+            </div>
+            <div class="cs-progress">
+              <div class="cs-progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%;"></div>
+            </div>
+          </div>
+          <div class="cs-row cs-mb-4">
+            <div class="cs-col-6">
+              <div class="cs-mb-1 cs-text-muted cs-small">Arquivos Processados</div>
+              <div class="cs-fs-4 cs-fw-bold">4 <small class="cs-text-muted cs-fs-6">/ 6</small></div>
+            </div>
+            <div class="cs-col-6">
+              <div class="cs-mb-1 cs-text-muted cs-small">Registros Identificados</div>
+              <div class="cs-fs-4 cs-fw-bold">15.100 <small class="cs-text-muted cs-fs-6">/ 18.300</small></div>
+            </div>
+          </div>
+          <div class="cs-bg-light cs-p-3 cs-rounded">
+            <p class="cs-fw-medium cs-mb-1">Validação de Registros</p>
+            <p class="cs-small cs-text-muted cs-mb-0">O arquivo positivo deve conter no mínimo 3.000 registros para ser processado. Os IDs são identificados automaticamente por um worker dedicado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-col-12 cs-col-lg-6">
+      <div class="cs-card cs-h-100">
+        <div class="cs-card-header">
+          <h5 class="cs-card-title cs-mb-0">Arquivos Disponíveis</h5>
+        </div>
+        <div class="cs-card-body">
+          <p class="cs-card-text cs-text-muted cs-mb-3">Lista de arquivos enviados e seus status de processamento</p>
+          <div class="scroll-container">
+            <div class="cs-list-group">
+              <div class="cs-list-group-item file-item cs-p-3">
+                <div class="cs-d-flex cs-justify-content-between cs-align-items-start cs-mb-2">
+                  <div class="cs-d-flex cs-align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="cs-bi cs-bi-file-text cs-text-secondary cs-me-2" viewBox="0 0 16 16">
+                      <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5z"/>
+                      <path d="M4.5 6.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+                      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zM12 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                    </svg>
+                    <div>
+                      <div class="cs-fw-medium">positivo_20240521.csv</div>
+                      <small class="cs-text-muted">21/05/2024, 14:30:00</small>
+                    </div>
+                  </div>
+                  <span class="badge badge-positive">Positivo</span>
+                </div>
+                <div class="cs-d-flex cs-justify-content-between cs-align-items-center">
+                  <div class="cs-d-flex cs-align-items-center gap-3">
+                    <span class="badge badge-completed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="cs-bi cs-bi-check-circle cs-me-1" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                      </svg>
+                      Concluído
+                    </span>
+                    <small>4850 / 5000 registros</small>
+                  </div>
+                  <button type="button" class="cs-btn cs-btn-sm cs-btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="cs-bi cs-bi-trash" viewBox="0 0 16 16">
+                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zM8 5.5a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zM11 6a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                      <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4H2.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3h11V2h-11v1z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Outras entradas de arquivos poderiam ser inseridas aqui -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
